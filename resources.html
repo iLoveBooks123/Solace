@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resources & Crisis Lines | Mental Health Compass</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link href="resource-styles.css" rel="stylesheet">
+    
+</head>
+
+<body class="min-h-screen flex flex-col">
+    <header class="navbar-bg sticky top-0 z-10">
+        <div class="flex justify-between items-center px-6 md:px-12 py-4 max-w-7xl mx-auto">
+            <div class="logo-area">
+                <img 
+                    src="images_ANS/LogoTrans.png" 
+                    alt="Solace: A Mental Health Initiative Logo" 
+                    class="logo-image h-20 w-auto"
+                >
+            </div>
+            <nav class="space-x-6 hidden sm:block">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="schedule.html" class="nav-link">Services</a>
+                <a href="information-hub.html" class="nav-link">About Mental Health</a>
+                <a href="resources.html" class="nav-link active">Resources</a>
+                <a href="blogs.html" class="nav-link">The Solace Journal</a>
+                <a href="community.html" class="nav-link">Community</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-[var(--page-background)] py-24 md:py-32 px-6 text-center border-b-4 border-[var(--muted-lavender)]">
+        <div class="max-w-4xl mx-auto">
+            <h1 class="text-5xl md:text-7xl font-bold mb-6 text-[var(--text-color)] leading-tight">
+                Resources
+            </h1>
+            <p class="text-xl md:text-2xl text-[var(--text-color)] opacity-90 mb-10 max-w-3xl mx-auto">
+                The first step to feeling better starts here. Find the right time and service for you.
+            </p>
+        </div>
+    </section>
+
+    <main class="flex-grow container mx-auto px-4 py-12 max-w-4xl">
+        
+        <div class="bg-yellow-50 border-l-4 border-yellow-500 p-4 rounded-lg mb-8 shadow-sm">
+            <p class="font-semibold text-yellow-700">
+                <span class="text-lg mr-2 inline-block">⚠️</span>
+                If you are in immediate danger or need urgent help, please call 911 or the 988 Suicide & Crisis Lifeline immediately.
+            </p>
+        </div>
+
+        <!-- ACCORDION RESOURCE LIST -->
+        <div class="accordion-container border rounded-xl overflow-hidden shadow-lg bg-white">
+
+            <div class="accordion-item" data-accordion-id="crisis">
+                <div class="accordion-header p-4 flex justify-between items-center">
+                    <span>Coping with a Crisis & Immediate Helplines</span>
+                    <span class="accordion-icon font-sans text-xl">+</span>
+                </div>
+                <div class="accordion-content">
+                    <a href="tel:988" class="resource-link font-bold">988 Suicide & Crisis Lifeline (Call/Text 24/7)</a>
+                    <a href="sms:741741" class="resource-link font-bold">Crisis Text Line (Text HOME to 741741)</a>
+                    <a href="tel:18007862929" class="resource-link">Finding a Safe Place & Shelter Services (National Runaway Safeline)</a>
+                    <a href="https://childmind.org/article/calm-down-skills-for-stressful-moments/" class="resource-link">Coping Skills for High-Stress Moments</a>
+                </div>
+            </div>
+
+            <div class="accordion-item" data-accordion-id="community">
+                <div class="accordion-header p-4 flex justify-between items-center">
+                    <span>Community & Peer Support</span>
+                    <span class="accordion-icon font-sans text-xl">+</span>
+                </div>
+                <div class="accordion-content">
+                    <a href="https://findtreatment.gov/" class="resource-link">Local Community Mental Health Centers (SAMHSA Locator)</a>
+                    <a href="https://www.nami.org/Support-Education/Support-Groups" class="resource-link">Finding Peer Support Groups in Your Area (NAMI)</a>
+                    <a href="https://www.mhanational.org/resources-parents-and-caregivers" class="resource-link">Resources for Family Members and Friends (MHA)</a>
+                </div>
+            </div>
+
+            <div class="accordion-item" data-accordion-id="youth">
+                <div class="accordion-header p-4 flex justify-between items-center">
+                    <span>Youth & Family Services</span>
+                    <span class="accordion-icon font-sans text-xl">+</span>
+                </div>
+                <div class="accordion-content">
+                    <a href="https://www.thejedfoundation.org/resource/talking-to-parents-about-your-mental-health/" class="resource-link">Talking to Parents/Guardians about Mental Health</a>
+                    <a href="https://www.verywellmind.com/how-to-talk-to-your-school-counselor-5202685" class="resource-link">School Counselor Check-in Guide</a>
+                    <a href="https://www.aamft.org/Directories/Find_a_Marriage_Family_Therapist.aspx" class="resource-link">Family Therapy and Conflict Resolution</a>
+                </div>
+            </div>
+
+            <div class="accordion-item" data-accordion-id="education">
+                <div class="accordion-header p-4 flex justify-between items-center">
+                    <span>Digital Wellness & Education</span>
+                    <span class="accordion-icon font-sans text-xl">+</span>
+                </div>
+                <div class="accordion-content">
+                    <a href="https://www.commonsensemedia.org/articles/digital-well-being" class="resource-link">Digital Balance Checklist & Tips</a>
+                    <a href="https://www.thejedfoundation.org/resource/managing-school-stress/" class="resource-link">Managing School Stress & Burnout</a>
+                    <a href="https://www.verywellmind.com/how-to-start-a-gratitude-journal-5203360" class="resource-link">Starting a Gratitude Journal</a>
+                </div>
+            </div>
+            
+            <div class="accordion-item" data-accordion-id="lgbtqia">
+                <div class="accordion-header p-4 flex justify-between items-center">
+                    <span>LGBTQIA+ Support</span>
+                    <span class="accordion-icon font-sans text-xl">+</span>
+                </div>
+                <div class="accordion-content">
+                    <a href="tel:18664887386" class="resource-link">The Trevor Project (Call/Text START to 678-678)</a>
+                    <a href="https://www.pflag.org/find-a-chapter" class="resource-link">Finding Local Inclusive Groups (PFLAG)</a>
+                    <a href="https://www.hrc.org/resources/transgender-children-and-youth-understanding-the-basics" class="resource-link">Resources for Gender Identity and Expression (HRC)</a>
+                </div>
+            </div>
+
+            <div class="accordion-item" data-accordion-id="financial">
+                <div class="accordion-header p-4 flex justify-between items-center">
+                    <span>Medical and Financial Assistance</span>
+                    <span class="accordion-icon font-sans text-xl">+</span>
+                </div>
+                <div class="accordion-content">
+                    <a href="https://openpathcollective.org/" class="resource-link">Information on Low-Cost Therapy Options (Open Path)</a>
+                    <a href="https://www.healthcare.gov/" class="resource-link">Health Insurance Enrollment Help (USA)</a>
+                    <a href="https://www.goodrx.com/" class="resource-link">Understanding Prescription Costs (GoodRx)</a>
+                </div>
+            </div>
+            </div>
+        </div>
+        
+    </main>
+
+    <footer class="site-footer p-6 text-center">
+        <p class="text-sm">&copy; 2025 Solace: A Mental Health Initiative.</p>
+        <div class="mt-2 space-x-4">
+            <a href="#" class="text-gray-200 hover:text-[var(--muted-lavender)] transition">Privacy Policy</a>
+            <span class="text-gray-400">|</span>
+            <a href="#" class="text-gray-200 hover:text-[var(--muted-lavender)] transition">Terms of Service</a>
+        </div>
+    </footer>
+    
+    <script src="resources.js"></script>
+</body>
+</html>
