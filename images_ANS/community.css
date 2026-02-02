@@ -1,0 +1,164 @@
+/* --- Consolidated styles.css for Solace Mental Health Initiative --- */
+
+.linear-gradient {
+    background: linear-gradient(to bottom,white, #d8e8ed, #cabed7);
+  }
+  
+
+/* 1. CORE COLOR PALETTE AND VARIABLES */
+:root {
+    --page-background: #d8e8ed; /* Light Dusty Blue - general background */
+    --text-color: #333333; /* Dark text for readability */
+    
+    --accent-blue: #92a8d1; /* Soft Slate Blue (Primary Accent/CTA) */
+    --secondary-accent: #abb1cf; /* Muted Blue/Periwinkle (Cards/Borders) */
+    --muted-lavender: #c5b9cd; /* Muted Lavender */
+    --lightest-pink: #f7cac9; /* Very Light Pink/Mauve */
+    --old-header-color: #dec2cb; 
+
+    --logo-brown: #9A7235; 
+
+    --font-serif: 'Playfair Display', serif;
+    --font-sans: 'Inter', Arial, sans-serif;
+
+    /* Resource Page Specific Colors (from the second stylesheet block) */
+    --background-color: #c7e0e7; /* Pale Blue/Teal background */
+    --light-gray: #f7f9fa; /* Very light background for white areas */
+    --accordion-purple: #5c3f91; /* Purple for accordion header text */
+}
+
+/* 2. GLOBAL RESET AND BODY STYLES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-sans);
+    background-color: var(--page-background); 
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* General Typography */
+h1, h2, h3 {
+    font-family: var(--font-serif);
+    font-weight: 700;
+}
+
+/* 3. NAVIGATION BAR STYLING */
+.navbar-bg {
+    background-color: var(--page-background); 
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--text-color);
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: var(--accent-blue);
+}
+
+.nav-link.active {
+    font-weight: bold;
+    color: var(--accent-blue);
+}
+
+/* Logo Image (basic sizing) */
+.logo-image {
+    height: 32px; 
+    width: auto;
+    margin-right: 10px;
+}
+
+/* 4. FOOTER STYLING */
+.site-footer {
+    background-color: #1a1a1a;
+    color: #ccc;
+    font-size: 14px;
+    padding: 20px;
+    text-align: center;
+}
+
+
+/* 5. BLOGS PAGE (SOLACE JOURNAL) ARTICLE CARD STYLING */
+
+/* Custom Shadow for the Blog Article Boxes */
+.card-shadow {
+    box-shadow: 0 4px 15px rgba(171, 177, 207, 0.3); 
+}
+
+/* Base style for the category tags */
+.category-tag {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 0.75rem; 
+    font-weight: 600;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    color: white;
+}
+
+/* Specific colors for each category type */
+.category-stress {
+    background-color: var(--accent-blue); /* #92a8d1 */
+}
+
+.category-sleep {
+    background-color: var(--muted-lavender); /* #c5b9cd */
+}
+
+.category-social {
+    background-color: var(--lightest-pink); /* #f7cac9 */
+    color: var(--text-color); /* Dark text on very light background */
+}
+
+.category-selfcare {
+    background-color: var(--secondary-accent); /* #abb1cf */
+}
+
+
+/* 6. RESOURCES PAGE (ACCORDION) STYLING */
+
+/* Accordion Styles */
+.accordion-item {
+    border: 1px solid #e5e7eb;
+    margin-bottom: -1px; 
+}
+.accordion-header {
+    background-color: white;
+    color: var(--accordion-purple);
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+.accordion-header:hover {
+    background-color: #f3f4f6;
+}
+.accordion-content {
+    background-color: #fcfcfc;
+    border-top: 1px solid #e5e7eb;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+}
+.accordion-content.open {
+    max-height: 500px; 
+    padding: 16px 24px;
+}
+.resource-link {
+    color: var(--accent-blue);
+    text-decoration: none;
+    display: block;
+    padding: 8px 0;
+    border-bottom: 1px dotted #e5e7eb;
+}
+.resource-link:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}

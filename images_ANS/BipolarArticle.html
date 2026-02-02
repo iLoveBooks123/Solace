@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Article | Mental Health Compass</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="min-h-screen flex flex-col">
+
+    <!-- Navbar (Same as your main site) -->
+    <header class="navbar-bg sticky top-0 z-10">
+        <div class="flex justify-between items-center px-6 md:px-12 py-4 max-w-7xl mx-auto">
+            <a href = "index.html">
+                <img 
+                src="images_ANS/LogoTrans.png" 
+                alt="Solace: A Mental Health Initiative Logo" 
+                class="logo-image h-20 w-auto"
+            > </a>
+            <nav class="space-x-6 hidden sm:block">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="schedule.html" class="nav-link">Services</a>
+                <a href="information-hub.html" class="nav-link">About Mental Health</a>
+                <a href="resources.html" class="nav-link">Resources</a>
+                <a href="blogs.html" class="nav-link active">The Solace Journal</a>
+                <a href="community.html" class="nav-link">Community</a>
+            </nav>
+        </div>
+    </header>
+<!-- Article Hero Section -->
+<section class="hero-image py-24 md:py-32 px-6 text-center border-b-4 border-[var(--muted-lavender)]">
+        <div class="max-w-4xl mx-auto">
+        <h1 class="text-4xl md:text-6xl font-bold mb-4 text-[var(--text-color)] leading-tight">
+            Two Sides
+        </h1>
+        <p class="text-md md:text-lg text-[var(--text-color)] opacity-90 mb-6 max-w-3xl mx-auto">
+            By The Solace Team | Read Time: 2 min
+        </p>
+        <a href="blogs.html" class="inline-block bg-[var(--accent-blue)] text-white py-2 px-6 rounded-full font-semibold hover:bg-opacity-90 transition">
+            ← Back to Blog
+        </a>
+    </div>
+</section>
+
+<main class="flex-grow w-full flex justify-center px-6 py-12">
+    <article class="max-w-4xl text-left space-y-8">
+        <p class="text-lg leading-relaxed">
+            Bipolar disorder is a serious brain disorder characterized by dramatic shifts in a person's mood, energy, and ability to function. These shifts go far beyond normal ups and downs and are marked by distinct episodes of intense highs (mania or hypomania) and severe lows (depression).  A person experiences extreme, distinct episodes of elevated mood and energy that feel entirely different from their usual self, followed by severe depressive episodes. Individuals may feel like a completely different person during these episodes, and their actions in one state may be uncharacteristic of the other.
+        </p>
+
+        <p class="text-lg leading-relaxed">
+            The manic side of the disorder is characterized by the high pole of the disorder. A person in this state might be feeling extremely confident, bursting with energy and unable to sit still. They need very little sleep, engaging in risky behaviors, like excessive spending, fast driving, or impulsive decisions.  For some, the high side is an angry, explosive, and restless irritability rather than pure joy. To an outside observer, and even to the individual themselves once the episode passes, the person in a manic state may seem radically different from their usual, stable self.
+        </p>
+
+        <p class="text-lg leading-relaxed">
+            The depressive state is often a severe and debilitating depression that is the stark opposite of the manic state. People experience profound sadness and hopelessness, often described as a dark void.. They feel physically drained, unable to move, and finding simple tasks impossible. They also show omplete apathy toward activities, hobbies, or relationships that once brought pleasure.
+        </p>
+
+        <p class="text-lg leading-relaxed">
+            If you or someone you know is experiencing symptoms of bipolar disorder, it is critical to seek professional help immediately. You can find resources and more information via the National Institute of Mental Health (NIMH) website or the Depression and Bipolar Support Alliance (DBSA).
+        </p>
+
+        <h2>Additional Resources</h2>
+        <ul class="list-disc list-inside">
+            <li><a href="https://www.dbsalliance.org" class="text-[var(--accent-blue)] hover:underline">Depression and Bipolar Support Alliance</a></li>
+            <li><a href="https://mhanational.org" class="text-[var(--accent-blue)] hover:underline">Mental Health America</a></li>
+        </ul>
+    </article>
+</main>
+
+    <!-- Footer -->
+    <footer class="site-footer p-6 text-center">
+        <p class="text-sm">&copy; 2025 Solace: A Mental Health Initiative.</p>
+        <div class="mt-2 space-x-4">
+            <a href="#" class="text-gray-200 hover:text-[var(--muted-lavender)] transition">Privacy Policy</a>
+            <span class="text-gray-400">|</span>
+            <a href="#" class="text-gray-200 hover:text-[var(--muted-lavender)] transition">Terms of Service</a>
+        </div>
+    </footer>
+
+</body>
+</html>
