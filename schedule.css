@@ -1,0 +1,119 @@
+/* --- Dedicated styles.css for Scheduling Page Only (schedule.html) --- */
+
+/* 1. CORE COLOR PALETTE AND VARIABLES */
+:root {
+    /* Global Site Colors */
+    --page-background: #d8e8ed; /* Light Dusty Blue - general background and navbar */
+    --text-color: #333333; /* Dark text for readability */
+    
+    /* Accent Colors */
+    --accent-blue: #92a8d1; /* Primary Accent/CTA (Used for nav, step cards, titles) */
+    --muted-lavender: #c5b9cd; /* Muted Lavender (Hero Border) */
+
+    /* Custom variables for step cards (referencing site accents for consistency) */
+    --primary-accent-solace: var(--accent-blue);
+    --soft-background-solace: #f7f9fa; /* A very light background for step cards */
+    --border-color-solace: #e5e7eb; 
+    --primary-light-solace: #eaf1f8; /* Very light blue for step icons */
+
+    /* Typography Variables */
+    --font-serif: 'Playfair Display', serif;
+    --font-sans: 'Inter', Arial, sans-serif;
+}
+
+.hero-banner {
+    background-image: url('images_ANS/Solace-14.png'); /* put your image path here */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+  }
+
+    /* Keep text white on banner */
+    .hero-banner h1,
+    .hero-banner p {
+      color: black;
+    }
+
+/* 2. GLOBAL RESET AND BODY STYLES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-sans);
+    background-color: var(--page-background); 
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* General Typography */
+h1, h2, h3 {
+    font-family: var(--font-serif);
+    font-weight: 700;
+}
+
+/* 3. NAVIGATION BAR STYLING (Shared) */
+.navbar-bg {
+    background-color: var(--page-background); 
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--text-color);
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: var(--accent-blue);
+}
+
+.nav-link.active {
+    font-weight: bold;
+    color: var(--accent-blue);
+}
+
+/* 4. FOOTER STYLING (Shared) */
+.site-footer {
+    background-color: #1a1a1a;
+    color: #ccc;
+    font-size: 14px;
+    padding: 20px;
+    text-align: center;
+}
+
+/* 5. SCHEDULE PAGE SPECIFIC STYLES (From inline <style> block) */
+
+/* Ensures the Calendly container (where the widget is rendered) is sized correctly */
+.calendly-container {
+    /* Calendly injects an iframe that fills this container */
+    min-height: 800px; 
+    max-width: 100%;
+}
+
+.schedule-card {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    border-top: 5px solid var(--primary-accent-solace); /* Uses site accent color */
+    overflow: hidden; 
+}
+
+.step-card {
+    background-color: var(--soft-background-solace); /* Uses soft background from theme */
+    border: 1px solid var(--border-color-solace);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.step-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.step-icon {
+    color: var(--primary-accent-solace); /* Uses primary accent for numbering color */
+    background-color: var(--primary-light-solace); /* Uses light accent for background color */
+}

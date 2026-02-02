@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Article | Mental Health Compass</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="min-h-screen flex flex-col">
+
+    <!-- Navbar (Same as your main site) -->
+    <header class="navbar-bg sticky top-0 z-10">
+        <div class="flex justify-between items-center px-6 md:px-12 py-4 max-w-7xl mx-auto">
+            <a href = "index.html">
+                <img 
+                src="images_ANS/LogoTrans.png" 
+                alt="Solace: A Mental Health Initiative Logo" 
+                class="logo-image h-20 w-auto"
+            > </a>
+            <nav class="space-x-6 hidden sm:block">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="schedule.html" class="nav-link">Services</a>
+                <a href="information-hub.html" class="nav-link">About Mental Health</a>
+                <a href="resources.html" class="nav-link">Resources</a>
+                <a href="blogs.html" class="nav-link active">The Solace Journal</a>
+                <a href="community.html" class="nav-link">Community</a>
+            </nav>
+        </div>
+    </header>
+<!-- Article Hero Section -->
+<section class="hero-image py-24 md:py-32 px-6 text-center border-b-4 border-[var(--muted-lavender)]">
+        <div class="max-w-4xl mx-auto">
+        <h1 class="text-4xl md:text-6xl font-bold mb-4 text-[var(--text-color)] leading-tight">
+            Mental Health ft. AI
+        </h1>
+        <p class="text-md md:text-lg text-[var(--text-color)] opacity-90 mb-6 max-w-3xl mx-auto">
+            By The Solace Team | Read Time: 1 min
+        </p>
+        <a href="blogs.html" class="inline-block bg-[var(--accent-blue)] text-white py-2 px-6 rounded-full font-semibold hover:bg-opacity-90 transition">
+            ← Back to Blog
+        </a>
+    </div>
+</section>
+
+<main class="flex-grow w-full flex justify-center px-6 py-12">
+    <article class="max-w-4xl text-left space-y-8">
+        <p class="text-lg leading-relaxed">
+            Artificial intelligence can impact mental health in both helpful and harmful ways, especially for people living with mental health disorders such as depression, anxiety, bipolar disorder, and PTSD. AI powered apps and chatbots can help users monitor symptoms, practice coping techniques, and receive reminders for self-care or medication. These tools can provide immediate support during stressful moments and encourage individuals to seek professional help earlier, which may prevent symptoms from becoming more severe.
+        </p>
+
+        <p class="text-lg leading-relaxed">
+            On the other hand, AI can also negatively affect mental health and worsen certain mental health conditions. Excessive use of AI-driven social media and digital platforms can increase anxiety, depression, eating disorders, and feelings of loneliness by promoting constant comparison and unrealistic standards. For people with serious mental illnesses, relying too heavily on AI instead of trained professionals can delay accurate diagnosis and treatment. Because AI lacks human understanding and clinical judgment, it should be used as a supportive resource rather than a replacement for mental health care.
+        </p>
+
+        <p class="text-lg leading-relaxed">
+            Overall, AI should be used carefully and responsibly when it comes to mental health. While it can be a helpful tool for awareness, early support, and managing mental health diseases, it cannot replace human connection or professional care. Setting limits on AI use, protecting personal data, and encouraging real-world support systems are important steps to ensure AI improves mental well-being rather than harming it.
+        </p>
+
+        <h2>Additional Resources</h2>
+        <ul class="list-disc list-inside">
+            <li><a href="https://hai.stanford.edu/news/exploring-the-dangers-of-ai-in-mental-health-care" class="text-[var(--accent-blue)] hover:underline">Exploring the Dangers of AI in Mental Health Care</a></li>
+            <li><a href="https://www.science.org/doi/10.1126/science.adz9193" class="text-[var(--accent-blue)] hover:underline">Transforming Mental Health Research and Care Through Artificial Intelligence</a></li>
+        </ul>
+    </article>
+</main>
+
+    <!-- Footer -->
+    <footer class="site-footer p-6 text-center">
+        <p class="text-sm">&copy; 2025 Solace: A Mental Health Initiative.</p>
+        <div class="mt-2 space-x-4">
+            <a href="#" class="text-gray-200 hover:text-[var(--muted-lavender)] transition">Privacy Policy</a>
+            <span class="text-gray-400">|</span>
+            <a href="#" class="text-gray-200 hover:text-[var(--muted-lavender)] transition">Terms of Service</a>
+        </div>
+    </footer>
+
+</body>
+</html>

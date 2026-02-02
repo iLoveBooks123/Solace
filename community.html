@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Forum | Mental Health Compass</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="community.css">
+</head>
+
+<body class="linear-gradient min-h-screen flex flex-col bg-[var(--page-background)] text-[var(--text-color)]">
+    <header class="navbar-bg sticky top-0 z-10">
+        <div class="flex justify-between items-center px-6 md:px-12 py-4 max-w-7xl mx-auto">
+            <a href = "index.html">
+                <img 
+                src="images_ANS/LogoTrans.png" 
+                alt="Solace: A Mental Health Initiative Logo" 
+                class="logo-image h-20 w-auto"
+            > </a>
+            <nav class="space-x-6 hidden sm:block">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="schedule.html" class="nav-link">Services</a>
+                <a href="information-hub.html" class="nav-link">About Mental Health</a>
+                <a href="resources.html" class="nav-link">Resources</a>
+                <a href="blogs.html" class="nav-link">The Solace Journal</a>
+                <a href="community.html" class="nav-link active">Community</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-[var(--page-background)] py-24 md:py-32 px-6 text-center">
+        <div class="max-w-4xl mx-auto">
+            <h1 class="text-5xl md:text-7xl font-bold mb-6 text-[var(--text-color)] leading-tight">Community Forum</h1>
+            <p class="text-xl md:text-2xl text-[var(--text-color)] opacity-90 mb-10 max-w-3xl mx-auto">
+                Engage in our Solace community forum, where you can discover that you are not alone in this journey and can assist and support others.
+            </p>
+        </div>
+    </section>
+
+    <!-- Main Forum Content -->
+    <div class="container mx-auto px-4 py-8 max-w-7xl grid md:grid-cols-3 gap-8">
+
+        <!-- Sidebar / New Post Form -->
+        <aside class="md:col-span-1 space-y-6">
+
+            <div id="message-container" class="hidden"></div>
+
+            <div class="bg-white p-6 rounded-xl shadow-lg">
+                <h2 class="text-2xl font-serif font-semibold text-accent-blue mb-4 border-b pb-2">Start a New Thread</h2>
+                
+                <!-- Loading Spinner -->
+                <div id="loading-spinner" class="text-center py-8">
+                    <svg class="animate-spin h-8 w-8 text-accent-blue mx-auto" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                        <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                        <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                    </svg>
+                    <p class="mt-2 text-gray-500 text-sm">Connecting to community...</p>
+                </div>
+
+                <!-- Post Form -->
+                <form id="post-form" class="hidden">
+                    <div class="mb-4">
+                        <label for="post-title" class="block text-sm font-medium text-gray-700 mb-1">Title</label>
+                        <input type="text" id="post-title" required maxlength="100" placeholder="E.g., Dealing with exam stress"
+                            class="w-full p-2 border border-gray-300 rounded-lg focus:ring-accent-blue focus:border-accent-blue transition">
+                    </div>
+                    <div class="mb-6">
+                        <label for="post-content" class="block text-sm font-medium text-gray-700 mb-1">Content</label>
+                        <textarea id="post-content" required rows="5" maxlength="500" placeholder="Remember to be kind and supportive."
+                            class="w-full p-2 border border-gray-300 rounded-lg focus:ring-accent-blue focus:border-accent-blue transition"></textarea>
+                        <p class="text-xs text-gray-500 mt-1">Maximum 500 characters.</p>
+                    </div>
+                    <button type="submit" id="submit-post-btn"
+                        class="w-full bg-[var(--muted-lavender)] text-gray-900 py-3 rounded-lg font-semibold hover:bg-purple-400 transition duration-200 shadow-md">
+                        Share Your Thoughts
+                    </button>
+                
+
+                </form>
+            </div>
+
+            <div class="bg-white p-6 rounded-xl shadow-lg">
+                <h3 class="text-xl font-serif font-semibold text-gray-700 mb-4 border-b pb-2">Guidelines</h3>
+                <ul class="list-disc list-inside text-sm text-gray-600 space-y-2">
+                    <li>Be kind, respectful, and supportive.</li>
+                    <li>Do not share personally identifiable information.</li>
+                    <li>This is not a substitute for professional help.</li>
+                    <li>Report any harmful content immediately.</li>
+                </ul>
+            </div>
+
+        </aside>
+
+        <!-- Main Post List -->
+        <main class="md:col-span-2">
+            <h2 class="text-2xl font-serif font-semibold text-gray-800 mb-4 border-b pb-2">Latest Conversations</h2>
+            <div id="posts-container" class="space-y-4">
+                <div class="text-center p-8 bg-white rounded-xl shadow-lg text-gray-500">
+                    <p>Loading community posts...</p>
+                </div>
+            </div>
+        </main>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="site-footer p-6 text-center">
+        <p class="text-sm">&copy; 2025 Solace: A Mental Health Initiative.</p>
+        <div class="mt-2 space-x-4">
+            <a href="#" class="text-gray-200 hover:text-[var(--muted-lavender)] transition">Privacy Policy</a>
+            <span class="text-gray-400">|</span>
+            <a href="#" class="text-gray-200 hover:text-[var(--muted-lavender)] transition">Terms of Service</a>
+        </div>
+    </footer>
+
+    <!-- Community JS -->
+    <script src="community.js"></script>
+</body>
+</html>
