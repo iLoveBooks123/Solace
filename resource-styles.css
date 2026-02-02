@@ -1,5 +1,22 @@
 /* --- Dedicated styles.css for Resources Page Only (resources.html) --- */
 
+.hero-banner-2 {
+    background-image: url('images_ANS/Solace-12.png'); /* put your image path here */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+  }
+
+.gradient-bg {
+    background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.95),
+        rgba(216, 232, 237, 0.9)
+      
+    );
+}
+
 /* 1. CORE COLOR PALETTE AND VARIABLES */
 :root {
     /* Global Site Colors */

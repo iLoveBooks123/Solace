@@ -21,6 +21,20 @@
     --font-sans: 'Inter', Arial, sans-serif;
 }
 
+.hero-banner {
+    background-image: url('images_ANS/Solace-14.png'); /* put your image path here */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+  }
+
+    /* Keep text white on banner */
+    .hero-banner h1,
+    .hero-banner p {
+      color: black;
+    }
+
 /* 2. GLOBAL RESET AND BODY STYLES */
 * {
     margin: 0;

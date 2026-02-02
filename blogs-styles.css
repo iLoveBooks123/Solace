@@ -102,11 +102,15 @@ h1, h2, h3 {
 
 .category-social {
     background-color: var(--lightest-pink); /* #f7cac9 */
-    color: var(--text-color); /* Use dark text on this very light background */
 }
+
 
 .category-selfcare {
     background-color: var(--secondary-accent); /* #abb1cf */
+}
+
+.category-disorders {
+    background-color: var(--logo-brown); /* #abb1cf */
 }
 
 /* 5. Footer */
@@ -115,3 +119,8 @@ h1, h2, h3 {
     color: #ccc;
     font-size: 14px;
 }
+
+.linear-gradient {
+    background: linear-gradient(to bottom,white, #d4ebf2, #cabed7);
+  }
+  

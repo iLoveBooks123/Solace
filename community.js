@@ -1,4 +1,3 @@
-// community.js
 document.addEventListener("DOMContentLoaded", () => {
     const postsContainer = document.getElementById("posts-container");
     const loadingSpinner = document.getElementById("loading-spinner");
@@ -10,42 +9,39 @@ document.addEventListener("DOMContentLoaded", () => {
             id: 1,
             title: "Dealing with Exam Stress",
             content: "Exams can be overwhelming. Here's how I cope...",
-            video: "https://www.youtube.com/embed/5qap5aO4i9A", // example video
+            video: "https://www.youtube.com/embed/b3jq1zYYt3M?si=9KhSqHNvQ7DL5GBV",
             links: [
-                {text: "Read More on Our Blog", href: "blogs.html#exam-stress"},
-                {text: "Helpful Resource", href: "resources.html#stress"}
+                { text: "Read More", href: "blogs.html" }
             ]
         },
         {
             id: 2,
             title: "Building a Positive Morning Routine",
             content: "Starting the day right sets the tone...",
-            video: "https://www.youtube.com/embed/ScMzIvxBSi4",
+            video: "https://www.youtube.com/embed/4to02ymwA3Q?si=L7fklLm-VTCm6m4P",
             links: [
-                {text: "Morning Routine Tips", href: "blogs.html#morning-routine"},
-                {text: "Daily Mindfulness Exercise", href: "blogs.html#mindfulness"}
+                { text: "Read More", href: "blogs.html" }
             ]
         },
         {
             id: 3,
             title: "Managing Anxiety Through Journaling",
             content: "Journaling helps me identify triggers and relieve tension...",
-            video: "https://www.youtube.com/embed/Oo0hXJ1xzjs",
+            video: "https://www.youtube.com/embed/ylBou4b_wig?si=UdhJi9b__wdNRcgA",
             links: [
-                {text: "Journaling Tips", href: "blogs.html#journaling"},
-                {text: "More About Anxiety", href: "resources.html#anxiety"}
+                { text: "Read More", href: "blogs.html" }
             ]
         }
     ];
 
-    // Simulate auth delay
+    // Simulate loading
     setTimeout(() => {
-        loadingSpinner.style.display = "none";
-        postForm.classList.remove("hidden");
+        if (loadingSpinner) loadingSpinner.style.display = "none";
+        if (postForm) postForm.classList.remove("hidden");
         renderPosts();
     }, 1000);
 
-    // Function to render posts
+    // Render posts
     function renderPosts() {
         postsContainer.innerHTML = "";
         posts.forEach(post => {
@@ -65,7 +61,6 @@ document.addEventListener("DOMContentLoaded", () => {
         e.preventDefault();
         const title = document.getElementById("post-title").value.trim();
         const content = document.getElementById("post-content").value.trim();
-
         if (!title || !content) return;
 
         const newPost = {
@@ -74,7 +69,7 @@ document.addEventListener("DOMContentLoaded", () => {
             content,
             video: "https://www.youtube.com/embed/5qap5aO4i9A", // default video
             links: [
-                {text: "Check Our Blog", href: "blogs.html"}
+                { text: "Check Our Blog", href: "blogs.html" }
             ]
         };
 
@@ -109,11 +104,15 @@ document.addEventListener("DOMContentLoaded", () => {
         modalContent.textContent = post.content;
         modalVideo.innerHTML = `<iframe class="w-full h-64 rounded-lg" src="${post.video}" frameborder="0" allowfullscreen></iframe>`;
         modalLinks.innerHTML = "";
-        post.links.forEach(link => {
-            const li = document.createElement("li");
-            li.innerHTML = `<a href="${link.href}" class="text-accent-blue hover:underline">${link.text}</a>`;
-            modalLinks.appendChild(li);
-        });
+
+        if (post.links) {
+            post.links.forEach(link => {
+                const li = document.createElement("li");
+                li.innerHTML = `<a href="${link.href}" class="text-accent-blue hover:underline">${link.text}</a>`;
+                modalLinks.appendChild(li);
+            });
+        }
+
         modal.classList.remove("hidden");
     }
 

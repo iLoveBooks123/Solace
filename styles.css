@@ -5,9 +5,9 @@
     
     /* Existing colors retained as accents: */
     --accent-blue: #92a8d1; /* Soft Slate Blue (Primary Accent/CTA) */
-    --secondary-accent: #abb1cf; /* Muted Blue/Periwinkle (Cards/Borders) */
-    --muted-lavender: #c5b9cd; /* Muted Lavender */
-    --lightest-pink: #f7cac9; /* Very Light Pink/Mauve */
+    --secondary-accent: #6b8cae; /* Muted Blue/Periwinkle (Cards/Borders) */
+    --muted-lavender: #b7b1c9; /* Muted Lavender */
+    --lightest-pink: #d8ede7; /* Very Light Pink/Mauve */
     --old-header-color: #dec2cb; /* Keeping old main background as a unique accent */
 
     /* NEW: Color extracted from the Solace logo line art */
@@ -17,11 +17,69 @@
     --font-sans: 'Inter', Arial, sans-serif;
 }
 
+.linear-gradient {
+    background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.95),
+        rgba(216, 232, 237, 0.9)
+    );
+}
+
+.poster-bg {
+    background: 
+        rgba(216, 232, 237, 0.9)
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
+/* Hero/Banner Section */
+.hero-banner {
+    background-image: url('images_ANS/Solace-9.png'); /* put your image path here */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+  }
+
+  .hero-banner-1 {
+    background-image: url('images_ANS/Solace-8.png'); /* put your image path here */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+  }
+
+  
+  /* Keep text white on banner */
+  .hero-banner h1,
+  .hero-banner p {
+    color: black;
+  }
+  
+  /* CTA button stays as before but will stand out against image */
+  .hero-banner .cta-button {
+    background-color: var(--accent-blue);
+    color: white;
+  }
+  
+
+  .affirmation-box {
+    background: var(--accent-blue);
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    width: 350px;
+    box-shadow: 0 4px 10px #0000001a;
+  }
+  
+  #affirmation {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+  }
 
 body {
     font-family: var(--font-sans);
@@ -517,3 +575,118 @@ h1, h2, h3 {
     padding-left: 2rem;
     padding-right: 1rem;
 }
+
+/*spotlight*/
+/* ===== Monthly Mental Health Spotlight ===== */
+
+.spotlight-section {
+    background: linear-gradient(
+      180deg,
+      rgba(88, 128, 141, 0.9),
+      rgba(255, 255, 255, 0.95)
+    );
+    padding: 5rem 1.5rem;
+    text-align: center;
+  }
+
+  
+  .spotlight-month {
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    font-size: 0.9rem;
+    color: var(--accent-blue);
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+  }
+  
+  .spotlight-title {
+    font-family: "Playfair Display", serif;
+    font-size: 2.75rem;
+    color: var(--text-color);
+    margin-bottom: 1.25rem;
+  }
+  
+  .spotlight-description {
+    max-width: 640px;
+    margin: 0 auto 3rem;
+    font-size: 1.15rem;
+    line-height: 1.7;
+    color: #4a4a4a;
+  }
+  
+  /* Spotlight cards */
+  
+  .spotlight-links {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  
+  .spotlight-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 1.25rem;
+    font-weight: 600;
+    color: var(--text-color);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none;
+  }
+  
+  .spotlight-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.1);
+    color: var(--accent-blue);
+  }
+  
+  .carousel-section {
+    background: linear-gradient(
+            180deg,
+            rgba(216, 232, 237, 0.9),
+            rgba(255, 255, 255, 0.95)
+        );
+    padding: 5rem 1.5rem;
+}
+
+.faq-section {
+    background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.95),
+        rgba(216, 232, 237, 0.9)
+      
+    );
+    padding: 5rem 1.5rem;
+}
+
+.testimonial-card {
+    background-color: white; /* keep cards white */
+    color: #333; /* dark text */
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+}
+
+#affirmation-popup {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+  
+  #affirmation-popup.show {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  #affirmation-popup.hidden {
+    display: none;
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  

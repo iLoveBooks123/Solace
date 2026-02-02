@@ -1,29 +1,21 @@
-/* --- Consolidated styles.css for Solace Mental Health Initiative --- */
-
-.linear-gradient {
-    background: linear-gradient(to bottom,white, #d8e8ed, #cabed7);
-  }
-  
+/* --- Consolidated styles.css for Solace Mental Health Initiative (All Pages) --- */
 
 /* 1. CORE COLOR PALETTE AND VARIABLES */
 :root {
+    /* Global Site Colors */
     --page-background: #d8e8ed; /* Light Dusty Blue - general background */
     --text-color: #333333; /* Dark text for readability */
     
+    /* Accent Colors */
     --accent-blue: #92a8d1; /* Soft Slate Blue (Primary Accent/CTA) */
-    --secondary-accent: #abb1cf; /* Muted Blue/Periwinkle (Cards/Borders) */
-    --muted-lavender: #c5b9cd; /* Muted Lavender */
-    --lightest-pink: #f7cac9; /* Very Light Pink/Mauve */
-    --old-header-color: #dec2cb; 
+    --secondary-accent: #abb1cf; /* Muted Blue/Periwinkle (For Blog Card Styling) */
+    --muted-lavender: #c5b9cd; /* Muted Lavender (Hero Borders) */
+    --lightest-pink: #f7cac9; /* Very Light Pink/Mauve (For Blog Card Styling) */
 
-    --logo-brown: #9A7235; 
-
-    --font-serif: 'Playfair Display', serif;
+    --font-serif: 'Playfair Display', serif; /* Fonts */
     --font-sans: 'Inter', Arial, sans-serif;
 
-    /* Resource Page Specific Colors (from the second stylesheet block) */
-    --background-color: #c7e0e7; /* Pale Blue/Teal background */
-    --light-gray: #f7f9fa; /* Very light background for white areas */
+    /* Specific Colors for Resources/Accordion */
     --accordion-purple: #5c3f91; /* Purple for accordion header text */
 }
 
@@ -47,7 +39,7 @@ h1, h2, h3 {
     font-weight: 700;
 }
 
-/* 3. NAVIGATION BAR STYLING */
+/* 3. NAVIGATION BAR STYLING (Shared across all pages) */
 .navbar-bg {
     background-color: var(--page-background); 
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
@@ -68,14 +60,7 @@ h1, h2, h3 {
     color: var(--accent-blue);
 }
 
-/* Logo Image (basic sizing) */
-.logo-image {
-    height: 32px; 
-    width: auto;
-    margin-right: 10px;
-}
-
-/* 4. FOOTER STYLING */
+/* 4. FOOTER STYLING (Shared across all pages) */
 .site-footer {
     background-color: #1a1a1a;
     color: #ccc;
@@ -84,8 +69,7 @@ h1, h2, h3 {
     text-align: center;
 }
 
-
-/* 5. BLOGS PAGE (SOLACE JOURNAL) ARTICLE CARD STYLING */
+/* 5. BLOGS PAGE (SOLACE JOURNAL) SPECIFIC STYLING */
 
 /* Custom Shadow for the Blog Article Boxes */
 .card-shadow {
@@ -106,24 +90,87 @@ h1, h2, h3 {
 
 /* Specific colors for each category type */
 .category-stress {
-    background-color: var(--accent-blue); /* #92a8d1 */
+    background-color: var(--accent-blue);
 }
 
 .category-sleep {
-    background-color: var(--muted-lavender); /* #c5b9cd */
+    background-color: var(--muted-lavender);
 }
 
 .category-social {
-    background-color: var(--lightest-pink); /* #f7cac9 */
+    background-color: var(--lightest-pink); 
     color: var(--text-color); /* Dark text on very light background */
 }
 
 .category-selfcare {
-    background-color: var(--secondary-accent); /* #abb1cf */
+    background-color: var(--secondary-accent);
+}
+
+/* 6. INFORMATION HUB (SIDEBAR/CONTENT) SPECIFIC STYLING */
+
+/* Categories Box (Sidebar Menu) */
+.categories-box h3 {
+    font-family: var(--font-serif);
+    font-size: 24px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.categories-box ul {
+    list-style: none;
+}
+
+.categories-box li {
+    padding: 8px 0;
+}
+
+.categories-box a {
+    text-decoration: none;
+    color: var(--text-color);
+    transition: color 0.3s;
+    font-size: 16px;
+    display: block; 
+    padding: 4px 0;
+}
+
+.categories-box a:not(.active-topic):hover {
+    color: var(--accent-blue);
+    text-decoration: underline;
+}
+
+/* Featured Tip Box */
+.featured-tip {
+    border-left: 5px solid var(--accent-blue); 
+}
+
+.featured-tip h4 {
+    font-family: var(--font-serif);
+    font-size: 20px;
+    margin-bottom: 5px;
+    color: var(--accent-blue); 
+}
+
+/* Main Content Panel (info-box) Typography */
+.info-box h2 {
+    font-family: var(--font-serif);
+    font-size: 36px;
+    color: var(--accent-blue);
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+.info-box h3 {
+    font-family: var(--font-serif);
+    font-size: 28px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    color: #333;
 }
 
 
-/* 6. RESOURCES PAGE (ACCORDION) STYLING */
+/* 7. RESOURCES PAGE (ACCORDION) SPECIFIC STYLING */
 
 /* Accordion Styles */
 .accordion-item {
